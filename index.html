@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Reminder for Puggu 🌸</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="petals" id="petals"></div>
+
+  <main class="container">
+
+    <!-- STAGE 1 -->
+    <section class="stage active" id="stage1">
+      <div class="envelope">💌</div>
+      <p class="small">A LITTLE SOMETHING FOR YOU</p>
+      <h1>Hey, Puggu! 🌸</h1>
+      <p class="description">
+        I made something special for you.
+        Open it whenever you feel a little low.
+      </p>
+      <button onclick="nextStage(2)">OPEN YOUR LETTER ♡</button>
+    </section>
+
+    <!-- STAGE 2 -->
+    <section class="stage" id="stage2">
+      <div class="emoji">🧸</div>
+      <p class="small">PLEASE READ THIS</p>
+      <h1>Dear Puggu...</h1>
+      <div class="letter">
+        <p>
+          Hey Puggu! ❤️
+        </p>
+        <p>
+          I don't know what people have said to you,
+          but I want you to remember one thing.
+        </p>
+        <p>
+          Don't let someone's bad words, taunts or
+          unnecessary opinions make you feel less
+          about yourself.
+        </p>
+        <p>
+          Their words don't decide your worth.
+          You deserve kindness, respect and happiness.
+        </p>
+        <p>
+          You don't have to prove yourself to everyone.
+          Just keep being yourself. 🌷
+        </p>
+      </div>
+      <button onclick="nextStage(3)">I'M LISTENING 🥹</button>
+    </section>
+
+    <!-- STAGE 3 -->
+    <section class="stage" id="stage3">
+      <div class="emoji">🦋</div>
+      <h1>Remember Your Worth</h1>
+      <p class="description">
+        Tap each little heart to reveal a reminder.
+      </p>
+
+      <div class="heart-grid">
+        <button class="heart" onclick="reveal(this, 'You are enough, exactly as you are. ❤️')">♡</button>
+        <button class="heart" onclick="reveal(this, 'Someone’s taunt is not your identity. 🌸')">♡</button>
+        <button class="heart" onclick="reveal(this, 'You deserve to be treated with respect. 🧸')">♡</button>
+        <button class="heart" onclick="reveal(this, 'Never let negativity steal your happiness. ✨')">♡</button>
+      </div>
+
+      <p id="revealText" class="reveal-text">
+        Your little reminders will appear here...
+      </p>
+
+      <button onclick="nextStage(4)">ONE MORE THING 💗</button>
+    </section>
+
+    <!-- STAGE 4 -->
+    <section class="stage" id="stage4">
+      <div class="emoji">🌻</div>
+      <h1>A Small Promise?</h1>
+      <p class="description">
+        Promise yourself these three little things.
+      </p>
+
+      <div class="promise-list">
+        <label><input type="checkbox"> I won't believe every negative thing people say.</label>
+        <label><input type="checkbox"> I will give myself the kindness I deserve.</label>
+        <label><input type="checkbox"> I will never forget my own worth.</label>
+      </div>
+
+      <p class="description">
+        You don't need to be perfect.
+        Just remember to be kind to yourself.
+      </p>
+
+      <button onclick="nextStage(5)">OPEN YOUR FINAL SURPRISE 🎁</button>
+    </section>
+
+    <!-- STAGE 5 -->
+    <section class="stage" id="stage5">
+      <div class="emoji">🎀</div>
+      <p class="small">A MESSAGE FROM YOUR FRIEND</p>
+      <h1>One Last Thing, Puggu...</h1>
+
+      <div class="letter final-letter">
+        <p>
+          I might not always know the perfect words
+          to make everything better...
+        </p>
+        <p>
+          But I genuinely want to see you happy.
+          Please don't let people who hurt you
+          make you forget all the beautiful things
+          about yourself.
+        </p>
+        <p>
+          You matter. Your feelings matter.
+          And you deserve peaceful, happy days.
+        </p>
+        <p>
+          Whenever things feel difficult, you can
+          talk to me. You don't have to pretend
+          that everything is okay.
+        </p>
+        <h2>Stay strong, Puggu. ❤️</h2>
+        <h2>— Your friend, Vashu 🌷</h2>
+      </div>
+
+      <button onclick="makeMagic()">SEND YOU A LITTLE LOVE 💕</button>
+      <p id="finalMessage" class="reveal-text"></p>
+      <button class="restart" onclick="location.reload()">READ AGAIN ↻</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
